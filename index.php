@@ -11,7 +11,9 @@
 <div id="container">
 
     <header class="main-header">
-        <div class="custom-logo"></div>
+        <div class="custom-logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
+        </div>
         <div class="search"></div>
         <nav class="main-menu"></nav>
     </header>
