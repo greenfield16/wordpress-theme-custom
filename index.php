@@ -18,9 +18,23 @@
             $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
             echo '<img src="' . esc_url( $custom_logo_url ) . '" alt="">';
             ?>
-            
+
         </div>
-        <div class="search"></div>
+        <div class="search">
+
+        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+            <label>
+                <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+                <input type="search" class="search-field"
+                    placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+                    value="<?php echo get_search_query() ?>" name="s"
+                    title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+            </label>
+            <input type="submit" class="search-submit"
+                value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+        </form>
+
+        </div>
         <nav class="main-menu"></nav>
     </header>
 
