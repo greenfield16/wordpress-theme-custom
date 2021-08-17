@@ -12,24 +12,22 @@
 
     <header class="main-header">
         <div class="custom-logo">
+            <a href="<?php echo bloginfo( 'url' ); ?>">
             <?php
-
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-            echo '<img src="' . esc_url( $custom_logo_url ) . '" alt="">';
+            echo '<img src="' . esc_url( $custom_logo_url ) . '" alt="">';            
             ?>
-
+            </a>
         </div>
+
         <div class="search">
 
-        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-            <label>
-                <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+        <form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
                 <input type="search" class="search-field"
-                    placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+                    placeholder="<?php echo esc_attr_x( 'Search for…', 'placeholder' ) ?>"
                     value="<?php echo get_search_query() ?>" name="s"
                     title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-            </label>
             <input type="submit" class="search-submit"
                 value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
         </form>
