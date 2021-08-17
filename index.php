@@ -33,7 +33,11 @@
         </form>
 
         </div>
-        <nav class="main-menu"></nav>
+
+        <nav class="main-menu">
+            <?php wp_nav_menu(); ?>    
+        </nav>
+        
     </header>
 
     <section class="banner"></section>
