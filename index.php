@@ -37,10 +37,14 @@
         <nav class="main-menu">
             <?php wp_nav_menu(); ?>    
         </nav>
-        
+
     </header>
 
-    <section class="banner"></section>
+    <section class="banner">
+        <?php if ( is_active_sidebar( 'home_banner_slider' ) ) : ?>
+                <?php dynamic_sidebar( 'home_banner_slider' ); ?>
+        <?php endif; ?>
+    </section>
 
     <section class="content-holder">
         <article class="content"></article>
